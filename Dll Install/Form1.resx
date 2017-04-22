@@ -120,4 +120,14 @@
   <metadata name="Timer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <data name="TextBox1.Text" xml:space="preserve">
+    <value>Basically what this does is installs a plugin directly
+into WMP so theres no external program to run.
+100% WMP 
+
+The text file containing the current playing song will be spit to the documents folder
+
+I didn't create the .dll nor could I decompile it.
+It will be included in the GitHub</value>
+  </data>
 </root>

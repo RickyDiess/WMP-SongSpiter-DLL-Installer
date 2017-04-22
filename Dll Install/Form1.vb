@@ -21,12 +21,14 @@ Public Class Form1
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        If (Not System.IO.Directory.Exists("c:/temp")) Then
-            Directory.CreateDirectory("c:/temp")
-        End If
-        File.WriteAllBytes("c:/temp/" & "SongTitle.dll", My.Resources.SongTitle)
+        File.WriteAllBytes(Environment.SystemDirectory & "\SongTitle.dll", My.Resources.SongTitle)
 
-        Process.Start("CMD", "/C regsvr32 " + "c:/temp/SongTitle.dll")
+        Process.Start("CMD", "/C regsvr32 " + Environment.SystemDirectory + "\SongTitle.dll")
 
+    End Sub
+
+    Private Sub LinkLabel1_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
+        Dim webAddress As String = "https://github.com/RickyDiess/WMP-SongSpiter-DLL-Installer"
+        Process.Start(webAddress)
     End Sub
 End Class
